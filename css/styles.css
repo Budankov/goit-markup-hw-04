@@ -392,7 +392,7 @@ ol {
 }
 
 .member-info {
-  padding: 30px 0;
+  padding: 30px 0 0;
 }
 
 .member-name {
@@ -410,19 +410,45 @@ ol {
   font-size: 16px;
   line-height: 1.18;
 }
+
+.team .icon-network {
+  fill: var(--clients-color);
+}
+.team .company-socials {
+  margin: 16px 32px 30px 32px;
+}
 /*Конец нашей команды */
 
 /* Постоянные клиенты */
 .clients-list {
   display: flex;
-  margin: 0;
-  padding: 0;
 }
-.clients-item {
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--clients-color);
   border-radius: 4px;
+}
+
+.client-logo {
+  fill: var(--clients-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+}
+
+.client-link:hover .client-logo,
+.client-link:focus .client-logo {
+  fill: var(--accent-color);
 }
 /* Конец постоянных клиентов */
 /* Конец основного блока главной страницы (Студия) */
@@ -457,6 +483,7 @@ ol {
 .filter-button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* Конец списка фильтров */
 
@@ -476,6 +503,11 @@ ol {
 
 .project-card {
   display: block;
+}
+
+.project-card:hover,
+.project-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-info {
